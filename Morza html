@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Morza - Best Deals, One Place. Your trusted affiliate store for electronics, fashion, home, and more." />
+  <title>Morza - Best Deals, One Place</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ============ AFFILIATE DISCLOSURE BAR ============ -->
+  <div class="disclosure-bar">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>Morza is a participant in affiliate programs. We may earn a commission from qualifying purchases at no extra cost to you.</span>
+  </div>
+
+  <!-- ============ HEADER / NAVBAR ============ -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">M</span>
+        <span class="logo-text">Morza</span>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <select class="search-category" id="searchCategory">
+          <option value="all">All Categories</option>
+          <option value="electronics">Electronic Devices</option>
+          <option value="accessories">Electronic Accessories</option>
+          <option value="home">Home & Kitchen</option>
+          <option value="beauty">Health & Beauty</option>
+          <option value="fashion">Fashion</option>
+          <option value="watches">Watches & Accessories</option>
+          <option value="kids">Babies, Kids & Toys</option>
+          <option value="groceries">Groceries & Lifestyle</option>
+          <option value="sports">Sports & Outdoors</option>
+          <option value="automotive">Automotive</option>
+        </select>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search products on Morza..." autocomplete="off" />
+        <button class="search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <!-- Autocomplete dropdown -->
+        <ul class="autocomplete-list" id="autocompleteList"></ul>
+      </div>
+
+      <!-- Header Icons -->
+      <div class="header-icons">
+        <a href="#" class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i><span class="badge">3</span></a>
+        <a href="#" class="icon-btn" title="Account"><i class="fa-regular fa-user"></i></a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Navigation (Mega Menu) -->
+    <nav class="category-nav">
+      <div class="container">
+        <ul class="category-list" id="categoryList">
+          <li class="cat-item has-mega">
+            <a href="#"><i class="fa-solid fa-mobile-screen"></i> Electronic Devices <i class="fa-solid fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="mega-col">
+                <h4>Smartphones</h4>
+                <ul><li><a href="#">Apple iPhone</a></li><li><a href="#">Samsung Galaxy</a></li><li><a href="#">Xiaomi</a></li><li><a href="#">OnePlus</a></li></ul>
+              </div>
+              <div class="mega-col">
+                <h4>Laptops</h4>
+                <ul><li><a href="#">Gaming Laptops</a></li><li><a href="#">Ultrabooks</a></li><li><a href="#">Chromebooks</a></li></ul>
+              </div>
+              <div class="mega-col">
+                <h4>Tablets & Desktops</h4>
+                <ul><li><a href="#">Tablets</a></li><li><a href="#">Desktops</a></li><li><a href="#">Monitors</a></li></ul>
+              </div>
+              <div class="mega-col">
+                <h4>Smartwatches</h4>
+                <ul><li><a href="#">Apple Watch</a></li><li><a href="#">Fitness Bands</a></li><li><a href="#">Smart Bands</a></li></ul>
+              </div>
+            </div>
+          </li>
+          <li class="cat-item has-mega">
+            <a href="#"><i class="fa-solid fa-headphones"></i> Accessories <i class="fa-solid fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="mega-col"><h4>Audio</h4><ul><li><a href="#">Headphones</a></li><li><a href="#">Earbuds</a></li><li><a href="#">Speakers</a></li></ul></div>
+              <div class="mega-col"><h4>Power</h4><ul><li><a href="#">Chargers</a></li><li><a href="#">Power Banks</a></li><li><a href="#">Cables</a></li></ul></div>
+              <div class="mega-col"><h4>Protection</h4><ul><li><a href="#">Cases & Covers</a></li><li><a href="#">Screen Guards</a></li></ul></div>
+            </div>
+          </li>
+          <li class="cat-item has-mega">
+            <a href="#"><i class="fa-solid fa-blender"></i> Home & Kitchen <i class="fa-solid fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="mega-col"><h4>TVs</h4><ul><li><a href="#">Smart TVs</a></li><li><a href="#">LED TVs</a></li></ul></div>
+              <div class="mega-col"><h4>Refrigerators</h4><ul><li><a href="#">Single Door</a></li><li><a href="#">Double Door</a></li></ul></div>
+              <div class="mega-col"><h4>Kitchen</h4><ul><li><a href="#">Microwaves</a></li><li><a href="#">Blenders</a></li><li><a href="#">Air Fryers</a></li></ul></div>
+              <div class="mega-col"><h4>Cleaning</h4><ul><li><a href="#">Vacuum Cleaners</a></li><li><a href="#">Irons</a></li></ul></div>
+            </div>
+          </li>
+          <li class="cat-item"><a href="#"><i class="fa-solid fa-spa"></i> Health & Beauty</a></li>
+          <li class="cat-item"><a href="#"><i class="fa-solid fa-shirt"></i> Fashion</a></li>
+          <li class="cat-item"><a href="#"><i class="fa-regular fa-clock"></i> Watches</a></li>
+          <li class="cat-item"><a href="#"><i class="fa-solid fa-baby"></i> Kids & Toys</a></li>
+          <li class="cat-item"><a href="#"><i class="fa-solid fa-basket-shopping"></i> Groceries</a></li>
+          <li class="cat-item"><a href="#"><i class="fa-solid fa-football"></i> Sports</a></li>
+          <li class="cat-item"><a href="#"><i class="fa-solid fa-car"></i> Automotive</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ MOBILE SIDEBAR MENU ============ -->
+  <aside class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span class="logo-text">Morza</span>
+      <button class="close-menu" id="closeMenu" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-menu-list">
+      <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#flash-sale"><i class="fa-solid fa-bolt"></i> Flash Sale</a></li>
+      <li><a href="#categories"><i class="fa-solid fa-grid-2"></i> Categories</a></li>
+      <li><a href="#just-for-you"><i class="fa-solid fa-gift"></i> Just For You</a></li>
+      <li><a href="#blog"><i class="fa-solid fa-newspaper"></i> Buying Guides</a></li>
+      <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+    </ul>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main id="home">
+
+    <!-- HERO SLIDER -->
+    <section class="hero">
+      <div class="hero-slider" id="heroSlider">
+        <div class="slide active" style="background: linear-gradient(135deg, #FF6B00 0%, #FF9A3D 100%);">
+          <div class="slide-content">
+            <span class="slide-tag">New Arrivals</span>
+            <h1>Morza - Best Deals, One Place</h1>
+            <p>Discover thousands of products from trusted sellers worldwide.</p>
+            <a href="#just-for-you" class="btn btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="slide" style="background: linear-gradient(135deg, #1E6FFF 0%, #4D94FF 100%);">
+          <div class="slide-content">
+            <span class="slide-tag">Up to 70% Off</span>
+            <h1>Flash Sale is Live!</h1>
+            <p>Limited-time offers on electronics, fashion, and more.</p>
+            <a href="#flash-sale" class="btn btn-primary">Grab Deals <i class="fa-solid fa-bolt"></i></a>
+          </div>
+        </div>
+        <div class="slide" style="background: linear-gradient(135deg, #FF6B00 0%, #1E6FFF 100%);">
+          <div class="slide-content">
+            <span class="slide-tag">Free Shipping</span>
+            <h1>Affiliate Deals You'll Love</h1>
+            <p>Shop Amazon, Daraz, eBay — all in one place.</p>
+            <a href="#just-for-you" class="btn btn-primary">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <button class="slider-btn prev" id="prevSlide" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="slider-btn next" id="nextSlide" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    <!-- FLASH SALE -->
+    <section class="section flash-sale" id="flash-sale">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title">
+            <i class="fa-solid fa-bolt flash-icon"></i>
+            <h2>Flash Sale</h2>
+            <div class="countdown" id="countdown">
+              <div class="time-box"><span id="hours">00</span><small>Hrs</small></div>
+              <div class="time-box"><span id="minutes">00</span><small>Min</small></div>
+              <div class="time-box"><span id="seconds">00</span><small>Sec</small></div>
+            </div>
+          </div>
+          <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="product-grid" id="flashSaleGrid"></div>
+      </div>
+    </section>
+
+    <!-- FEATURED CATEGORIES -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Categories</h2>
+        </div>
+        <div class="category-grid">
+          <a href="#" class="category-card"><div class="cat-icon"><i class="fa-solid fa-mobile-screen"></i></div><span>Smartphones</span></a>
+          <a href="#" class="category-card"><div class="cat-icon"><i class="fa-solid fa-laptop"></i></div><span>Laptops</span></a>
+          <a href="#" class="category-card"><div class="cat-icon"><i class="fa-solid fa-headphones"></i></div><span>Headphones</span></a>
+          <a href="#" class="category-card"><div class="cat-icon"><i class="fa-solid fa-tv"></i></div><span>Televisions</span></a>
+          <a href="#" class="category-card"><div class="cat-icon"><i class="fa-solid fa-shirt"></i></div><span>Fashion</span></a>
+          <a href="#" class="category-card"><div class="cat-icon"><i class="fa-solid fa-spa"></i></div><span>Beauty</span></a>
+          <a href="#" class="category-card"><div class="cat-icon"><i class="fa-solid fa-couch"></i></div><span>Home Decor</span></a>
+          <a href="#" class="category-card"><div class="cat-icon"><i class="fa-solid fa-football"></i></div><span>Sports</span></a>
+          <a href="#" class="category-card"><div class="cat-icon"><i class="fa-solid fa-baby"></i></div><span>Kids & Toys</span></a>
+          <a href="#" class="category-card"><div class="cat-icon"><i class="fa-solid fa-car"></i></div><span>Automotive</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- JUST FOR YOU -->
+    <section class="section" id="just-for-you">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Just For You</h2>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-bar">
+          <div class="filter-group">
+            <label>Category:</label>
+            <select id="filterCategory">
+              <option value="all">All</option>
+              <option value="electronics">Electronics</option>
+              <option value="fashion">Fashion</option>
+              <option value="home">Home</option>
+              <option value="beauty">Beauty</option>
+              <option value="sports">Sports</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Price:</label>
+            <select id="filterPrice">
+              <option value="all">All Prices</option>
+              <option value="0-50">Under $50</option>
+              <option value="50-200">$50 - $200</option>
+              <option value="200-1000">$200 - $1000</option>
+              <option value="1000+">Above $1000</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Rating:</label>
+            <select id="filterRating">
+              <option value="all">All Ratings</option>
+              <option value="4">4★ & above</option>
+              <option value="3">3★ & above</option>
+              <option value="2">2★ & above</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Sort:</label>
+            <select id="filterSort">
+              <option value="popularity">Popularity</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+              <option value="discount">Biggest Discount</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- BLOG / BUYING GUIDES -->
+    <section class="section blog-section" id="blog">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Buying Guides & Reviews</h2>
+          <a href="#" class="view-all">All Articles <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-img"><img src="https://picsum.photos/seed/headphones/400/250" alt="Headphones Guide" loading="lazy"></div>
+            <div class="blog-body">
+              <span class="blog-tag">Audio</span>
+              <h3>Top 5 Best Headphones Under $50 (2026)</h3>
+              <p>Compare features, sound quality, and comfort of the best budget headphones.</p>
+              <table class="compare-table">
+                <tr><th>Model</th><th>Price</th><th>Rating</th></tr>
+                <tr><td>Sony WH-CH520</td><td>$38</td><td>4.5★</td></tr>
+                <tr><td>JBL Tune 510BT</td><td>$45</td><td>4.3★</td></tr>
+                <tr><td>Anker Soundcore</td><td>$40</td><td>4.4★</td></tr>
+              </table>
+              <a href="#" class="btn btn-outline">Read More</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-img"><img src="https://picsum.photos/seed/laptop/400/250" alt="Laptop Guide" loading="lazy"></div>
+            <div class="blog-body">
+              <span class="blog-tag">Laptops</span>
+              <h3>Best Budget Laptops for Students in 2026</h3>
+              <p>Find the perfect laptop for studies, coding, and entertainment without breaking the bank.</p>
+              <table class="compare-table">
+                <tr><th>Model</th><th>Price</th><th>Rating</th></tr>
+                <tr><td>Acer Aspire 3</td><td>$399</td><td>4.4★</td></tr>
+                <tr><td>HP Pavilion 15</td><td>$499</td><td>4.3★</td></tr>
+                <tr><td>Lenovo IdeaPad</td><td>$449</td><td>4.5★</td></tr>
+              </table>
+              <a href="#" class="btn btn-outline">Read More</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-img"><img src="https://picsum.photos/seed/skincare/400/250" alt="Skincare Guide" loading="lazy"></div>
+            <div class="blog-body">
+              <span class="blog-tag">Beauty</span>
+              <h3>10 Must-Have Skincare Products for Glowing Skin</h3>
+              <p>Expert-recommended skincare essentials for every skin type and budget.</p>
+              <table class="compare-table">
+                <tr><th>Product</th><th>Price</th><th>Rating</th></tr>
+                <tr><td>CeraVe Cleanser</td><td>$15</td><td>4.7★</td></tr>
+                <tr><td>The Ordinary Serum</td><td>$12</td><td>4.6★</td></tr>
+                <tr><td>Neutrogena Moisturizer</td><td>$18</td><td>4.5★</td></tr>
+              </table>
+              <a href="#" class="btn btn-outline">Read More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / NEWSLETTER -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Have questions or feedback? We'd love to hear from you.</p>
+            <ul class="contact-list">
+              <li><i class="fa-solid fa-envelope"></i> support@morza.com</li>
+              <li><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</li>
+              <li><i class="fa-solid fa-location-dot"></i> 123 Market Street, NY</li>
+            </ul>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <h3>Send us a Message</h3>
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="newsletter">
+          <div class="newsletter-content">
+            <h3><i class="fa-solid fa-bell"></i> Get Best Deals from Morza</h3>
+            <p>Subscribe to our newsletter and never miss exclusive offers.</p>
+          </div>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Morza</h4>
+          <p>Your trusted affiliate store — bringing the best deals from Amazon, Daraz, and eBay in one place.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">How to Buy</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping Info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Morza</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Affiliate Disclosure</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Payment Methods</h4>
+          <div class="payment-icons">
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-cc-paypal"></i>
+            <i class="fa-brands fa-cc-amex"></i>
+            <i class="fa-brands fa-cc-apple-pay"></i>
+            <i class="fa-brands fa-google-pay"></i>
+          </div>
+          <h4 style="margin-top:20px;">Shop With Confidence</h4>
+          <p style="font-size:13px;">All purchases are made through trusted affiliate partners with secure checkout.</p>
+        </div>
+      </div>
+
+      <div class="affiliate-disclosure">
+        <h4><i class="fa-solid fa-circle-info"></i> Affiliate Disclosure</h4>
+        <p>Morza is a participant in various affiliate advertising programs including Amazon Associates, Daraz Affiliate, and eBay Partner Network. As an affiliate, we earn from qualifying purchases. This comes at no additional cost to you. We only recommend products we believe will add value to our readers.</p>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Morza. All rights reserved. | Made with <i class="fa-solid fa-heart" style="color:#FF6B00;"></i> for smart shoppers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ MOBILE BOTTOM NAV ============ -->
+  <nav class="bottom-nav">
+    <a href="#home" class="bottom-item active"><i class="fa-solid fa-house"></i><span>Home</span></a>
+    <a href="#categories" class="bottom-item"><i class="fa-solid fa-grid-2"></i><span>Categories</span></a>
+    <a href="#flash-sale" class="bottom-item"><i class="fa-solid fa-bolt"></i><span>Flash Sale</span></a>
+    <a href="#blog" class="bottom-item"><i class="fa-solid fa-newspaper"></i><span>Guides</span></a>
+    <a href="#contact" class="bottom-item"><i class="fa-solid fa-user"></i><span>Account</span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+/* ============ RESET & BASE ============ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange: #FF6B00;
+  --orange-light: #FF9A3D;
+  --orange-dark: #E55A00;
+  --blue: #1E6FFF;
+  --blue-light: #4D94FF;
+  --blue-dark: #0A4FD9;
+  --white: #FFFFFF;
+  --bg: #F7F9FC;
+  --text: #1F2937;
+  --text-light: #6B7280;
+  --border: #E5E7EB;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+  --radius: 10px;
+  --radius-sm: 6px;
+  --transition: all 0.3s ease;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-bottom: 70px;
+}
+
+.container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ============ DISCLOSURE BAR ============ */
+.disclosure-bar {
+  background: var(--blue);
+  color: white;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 13px;
+}
+.disclosure-bar i { margin-right: 6px; }
+
+/* ============ HEADER ============ */
+.header {
+  background: white;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 24px;
+}
+.logo-icon {
+  background: linear-gradient(135deg, var(--orange), var(--blue));
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 800;
+}
+.logo-text {
+  background: linear-gradient(135deg, var(--orange), var(--blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Search */
+.search-bar {
+  flex: 1;
+  display: flex;
+  position: relative;
+  max-width: 700px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.search-bar:focus-within { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,107,0,0.15); }
+.search-category {
+  padding: 10px 12px;
+  border: none;
+  background: #F3F4F6;
+  border-right: 1px solid var(--border);
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+.search-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: white;
+}
+.search-btn {
+  background: var(--orange);
+  color: white;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: var(--transition);
+}
+.search-btn:hover { background: var(--orange-dark); }
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-top: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  box-shadow: var(--shadow-md);
+  z-index: 50;
+}
+.autocomplete-list.show { display: block; }
+.autocomplete-list li {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.autocomplete-list li:hover { background: #FFF5EB; color: var(--orange); }
+
+/* Header Icons */
+.header-icons { display: flex; gap: 10px; align-items: center; }
+.icon-btn {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #F3F4F6;
+  color: var(--text);
+  transition: var(--transition);
+  font-size: 16px;
+}
+.icon-btn:hover { background: var(--orange); color: white; transform: translateY(-2px); }
+.icon-btn .badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--blue);
+  color: white;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* Category Nav */
+.category-nav {
+  background: white;
+  border-top: 1px solid var(--border);
+  overflow-x: auto;
+}
+.category-list {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+}
+.cat-item { position: relative; }
+.cat-item > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
+}
+.cat-item > a:hover {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+.cat-item > a i.fa-chevron-down { font-size: 10px; margin-left: 4px; }
+
+/* Mega Menu */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 700px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  box-shadow: var(--shadow-lg);
+  border-radius: 0 0 var(--radius) var(--radius);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  z-index: 99;
+}
+.cat-item.has-mega:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.mega-col h4 {
+  color: var(--orange);
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--border);
+}
+.mega-col ul li a {
+  display: block;
+  padding: 5px 0;
+  font-size: 13px;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+.mega-col ul li a:hover { color: var(--orange); padding-left: 5px; }
+
+/* ============ MOBILE MENU ============ */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100vh;
+  background: white;
+  box-shadow: var(--shadow-lg);
+  z-index: 200;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+.mobile-menu.open { left: 0; }
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--orange), var(--blue));
+  color: white;
+}
+.mobile-menu-header .logo-text { color: white; -webkit-text-fill-color: white; font-size: 22px; }
+.close-menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+.mobile-menu-list li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+.mobile-menu-list li a:hover { background: #FFF5EB; color: var(--orange); }
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+.overlay.show { opacity: 1; visibility: visible; }
+
+/* ============ HERO SLIDER ============ */
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 1280px;
+  border-radius: var(--radius);
+  height: 380px;
+}
+.hero-slider { position: relative; height: 100%; }
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.slide.active { opacity: 1; }
+.slide-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  max-width: 700px;
+  animation: fadeUp 0.8s ease;
+}
+.slide-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  backdrop-filter: blur(10px);
+}
+.slide-content h1 { font-size: 42px; margin-bottom: 15px; font-weight: 800; }
+.slide-content p { font-size: 17px; margin-bottom: 25px; opacity: 0.95; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  color: var(--text);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  z-index: 10;
+}
+.slider-btn:hover { background: var(--orange); color: white; }
+.slider-btn.prev { left: 15px; }
+.slider-btn.next { right: 15px; }
+
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+.slider-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.slider-dots .dot.active { background: white; width: 28px; border-radius: 5px; }
+
+/* ============ BUTTONS ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+.btn-primary {
+  background: var(--orange);
+  color: white;
+}
+.btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn-outline {
+  background: transparent;
+  color: var(--orange);
+  border: 2px solid var(--orange);
+}
+.btn-outline:hover { background: var(--orange); color: white; }
+
+/* ============ SECTIONS ============ */
+.section { padding: 40px 0; }
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+.section-title h2 { font-size: 24px; }
+.flash-icon {
+  color: var(--orange);
+  font-size: 28px;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.15);} }
+
+.view-all {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition);
+}
+.view-all:hover { color: var(--orange); gap: 10px; }
+
+/* Countdown */
+.countdown { display: flex; gap: 8px; }
+.time-box {
+  background: var(--text);
+  color: white;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  min-width: 50px;
+}
+.time-box span { display: block; font-size: 18px; font-weight: 700; }
+.time-box small { font-size: 10px; opacity: 0.8; }
+
+/* ============ CATEGORY GRID ============ */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+}
+.category-card {
+  background: white;
+  padding: 20px 10px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--orange);
+}
+.cat-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  background: linear-gradient(135deg, #FFF5EB, #E6F0FF);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: var(--orange);
+  transition: var(--transition);
+}
+.category-card:hover .cat-icon { background: var(--orange); color: white; transform: rotate(10deg); }
+.category-card span { font-size: 14px; font-weight: 500; }
+
+/* ============ PRODUCT GRID ============ */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+.product-card {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+.product-img {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: #F3F4F6;
+}
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.product-card:hover .product-img img { transform: scale(1.08); }
+.product-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--orange);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.product-badge.flash { background: #E11D48; }
+.product-badge.bestseller { background: var(--blue); }
+.wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  color: var(--text-light);
+}
+.wishlist-btn:hover, .wishlist-btn.active { color: #E11D48; transform: scale(1.1); }
+.discount-tag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #E11D48;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.product-info {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.product-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.4;
+  height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.stars { color: #FBBF24; }
+.rating-count { color: var(--text-light); font-size: 12px; }
+.product-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.current-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--orange);
+}
+.old-price {
+  font-size: 13px;
+  color: var(--text-light);
+  text-decoration: line-through;
+}
+.buy-btn {
+  margin-top: auto;
+  background: var(--blue);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.buy-btn:hover { background: var(--blue-dark); transform: translateY(-2px); }
+
+/* ============ FILTERS ============ */
+.filters-bar {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  background: white;
+  padding: 15px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.filter-group { display: flex; align-items: center; gap: 8px; }
+.filter-group label { font-size: 13px; font-weight: 600; color: var(--text-light); }
+.filter-group select {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  background: white;
+}
+.filter-group select:focus { border-color: var(--orange); }
+
+/* ============ BLOG ============ */
+.blog-section { background: white; }
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+.blog-card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+.blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.blog-img { height: 200px; overflow: hidden; }
+.blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.blog-card:hover .blog-img img { transform: scale(1.05); }
+.blog-body { padding: 20px; }
+.blog-tag {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.blog-body h3 { font-size: 18px; margin-bottom: 10px; line-height: 1.4; }
+.blog-body p { font-size: 14px; color: var(--text-light); margin-bottom: 15px; }
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+.compare-table th, .compare-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.compare-table th { background: var(--blue); color: white; font-weight: 600; }
+.compare-table tr:nth-child(even) td { background: #F9FAFB; }
+
+/* ============ CONTACT ============ */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.contact-info h2 { font-size: 28px; margin-bottom: 15px; color: var(--text); }
+.contact-info p { color: var(--text-light); margin-bottom: 20px; }
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 15px;
+}
+.contact-list li i {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--orange), var(--blue));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+.contact-form h3 { margin-bottom: 20px; color: var(--text); }
+.form-group { margin-bottom: 15px; }
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+  transition: var(--transition);
+}
+.form-group input:focus, .form-group textarea:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,107,0,0.1); }
+
+.newsletter {
+  background: linear-gradient(135deg, var(--orange), var(--blue));
+  color: white;
+  padding: 40px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.newsletter h3 { font-size: 24px; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.newsletter p { opacity: 0.95; }
+.newsletter-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.newsletter-form input {
+  padding: 12px 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  min-width: 280px;
+  font-size: 14px;
+  outline: none;
+}
+.newsletter-form .btn-primary { background: var(--text); }
+.newsletter-form .btn-primary:hover { background: #000; }
+
+/* ============ FOOTER ============ */
+.footer {
+  background: #111827;
+  color: #D1D5DB;
+  padding: 50px 0 20px;
+  margin-top: 40px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
+  margin-bottom: 30px;
+}
+.footer-col h4 { color: white; margin-bottom: 18px; font-size: 16px; }
+.footer-col p { font-size: 14px; line-height: 1.7; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a {
+  font-size: 14px;
+  color: #D1D5DB;
+  transition: var(--transition);
+}
+.footer-col ul li a:hover { color: var(--orange); padding-left: 5px; }
+.social-links { display: flex; gap: 10px; margin-top: 15px; }
+.social-links a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1F2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: var(--transition);
+}
+.social-links a:hover { background: var(--orange); transform: translateY(-3px); }
+.payment-icons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 28px;
+  color: white;
+}
+.affiliate-disclosure {
+  background: #1F2937;
+  padding: 20px;
+  border-radius: var(--radius);
+  margin-bottom: 25px;
+  border-left: 4px solid var(--orange);
+}
+.affiliate-disclosure h4 { color: var(--orange); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.affiliate-disclosure p { font-size: 13px; line-height: 1.7; color: #D1D5DB; }
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #1F2937;
+  font-size: 14px;
+}
+
+/* ============ BOTTOM NAV (MOBILE) ============ */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: none;
+  justify-content: space-around;
+  padding: 8px 0;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+  z-index: 90;
+}
+.bottom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  color: var(--text-light);
+  padding: 4px 8px;
+  transition: var(--transition);
+}
+.bottom-item i { font-size: 18px; }
+.bottom-item.active, .bottom-item:hover { color: var(--orange); }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .search-category { display: none; }
+  .mega-menu { min-width: 500px; grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  body { padding-bottom: 70px; }
+  .hamburger { display: flex; }
+  .category-nav { display: none; }
+  .search-bar { order: 3; flex: 0 0 100%; margin-top: 10px; }
+  .header-inner { flex-wrap: wrap; }
+  .hero { height: 280px; margin: 10px; border-radius: 8px; }
+  .slide-content h1 { font-size: 26px; }
+  .slide-content p { font-size: 14px; }
+  .section-title { font-size: 20px; }
+  .section-title h2 { font-size: 20px; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .product-img { height: 160px; }
+  .current-price { font-size: 16px; }
+  .contact-wrapper { grid-template-columns: 1fr; gap: 25px; }
+  .newsletter { flex-direction: column; text-align: center; padding: 25px; }
+  .newsletter-form input { min-width: 100%; }
+  .bottom-nav { display: flex; }
+  .footer { padding-bottom: 80px; }
+  .filters-bar { flex-direction: column; }
+  .filter-group { width: 100%; }
+  .filter-group select { flex: 1; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .countdown .time-box { padding: 4px 8px; min-width: 40px; }
+  .time-box span { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .logo-text { font-size: 20px; }
+  .logo-icon { width: 34px; height: 34px; font-size: 18px; }
+  .icon-btn { width: 38px; height: 38px; }
+  .category-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .cat-icon { width: 50px; height: 50px; font-size: 22px; }
+  .category-card span { font-size: 12px; }
+  .section { padding: 25px 0; }
+  .slide-content h1 { font-size: 22px; }
+}
+
+
+/* ============ PRODUCT DATA ============ */
+const products = [
+  { id:1, title:"Wireless Bluetooth Headphones with Noise Cancellation", price:49.99, oldPrice:89.99, rating:4.5, reviews:1243, category:"electronics", badge:"Flash Sale", badgeType:"flash", img:"https://picsum.photos/seed/prod1/300/300", popularity:95 },
+  { id:2, title:"Smart Watch Fitness Tracker with Heart Rate Monitor", price:79.99, oldPrice:149.99, rating:4.3, reviews:892, category:"electronics", badge:"Best Seller", badgeType:"bestseller", img:"https://picsum.photos/seed/prod2/300/300", popularity:92 },
+  { id:3, title:"Men's Casual Cotton T-Shirt - Premium Quality", price:19.99, oldPrice:39.99, rating:4.6, reviews:2103, category:"fashion", badge:"Flash Sale", badgeType:"flash", img:"https://picsum.photos/seed/prod3/300/300", popularity:88 },
+  { id:4, title:"Stainless Steel Kitchen Knife Set - 6 Pieces", price:34.99, oldPrice:69.99, rating:4.7, reviews:567, category:"home", badge:"Best Seller", badgeType:"bestseller", img:"https://picsum.photos/seed/prod4/300/300", popularity:85 },
+  { id:5, title:"Vitamin C Serum for Glowing Skin - 30ml", price:14.99, oldPrice:29.99, rating:4.4, reviews:1876, category:"beauty", badge:"Flash Sale", badgeType:"flash", img:"https://picsum.photos/seed/prod5/300/300", popularity:90 },
+  { id:6, title:"Gaming Mouse RGB Backlit - 12000 DPI", price:29.99, oldPrice:59.99, rating:4.5, reviews:743, category:"electronics", badge:"Best Seller", badgeType:"bestseller", img:"https://picsum.photos/seed/prod6/300/300", popularity:87 },
+  { id:7, title:"Women's Running Shoes - Lightweight Breathable", price:44.99, oldPrice:89.99, rating:4.3, reviews:1102, category:"sports", badge:"Flash Sale", badgeType:"flash", img:"https://picsum.photos/seed/prod7/300/300", popularity:82 },
+  { id:8, title:"Portable Bluetooth Speaker - Waterproof", price:39.99, oldPrice:79.99, rating:4.6, reviews:2341, category:"electronics", badge:"Best Seller", badgeType:"bestseller", img:"https://picsum.photos/seed/prod8/300/300", popularity:94 },
+  { id:9, title:"Yoga Mat Non-Slip - 6mm Thick", price:24.99, oldPrice:49.99, rating:4.5, reviews:654, category:"sports", badge:"Flash Sale", badgeType:"flash", img:"https://picsum.photos/seed/prod9/300/300", popularity:78 },
+  { id:10, title:"LED Desk Lamp with USB Charging Port", price:27.99, oldPrice:54.99, rating:4.4, reviews:432, category:"home", badge:"Best Seller", badgeType:"bestseller", img:"https://picsum.photos/seed/prod10/300/300", popularity:80 },
+  { id:11, title:"Leather Wallet for Men - RFID Blocking", price:22.99, oldPrice:44.99, rating:4.7, reviews:1567, category:"fashion", badge:"Flash Sale", badgeType:"flash", img:"https://picsum.photos/seed/prod11/300/300", popularity:89 },
+  { id:12, title:"20000mAh Power Bank Fast Charging", price:32.99, oldPrice:64.99, rating:4.5, reviews:2890, category:"electronics", badge:"Best Seller", badgeType:"bestseller", img:"https://picsum.photos/seed/prod12/300/300", popularity:96 },
+  { id:13, title:"Organic Face Moisturizer - All Skin Types", price:18.99, oldPrice:35.99, rating:4.6, reviews:987, category:"beauty", badge:"Flash Sale", badgeType:"flash", img:"https://picsum.photos/seed/prod13/300/300", popularity:83 },
+  { id:14, title:"Stainless Steel Water Bottle - 1L", price:16.99, oldPrice:29.99, rating:4.4, reviews:1234, category:"sports", badge:"Best Seller", badgeType:"bestseller", img:"https://picsum.photos/seed/prod14/300/300", popularity:81 },
+  { id:15, title:"Wireless Earbuds with Charging Case", price:54.99, oldPrice:99.99, rating:4.5, reviews:3421, category:"electronics", badge:"Flash Sale", badgeType:"flash", img:"https://picsum.photos/seed/prod15/300/300", popularity:97 },
+  { id:16, title:"Cotton Bedsheet Set - Queen Size", price:39.99, oldPrice:79.99, rating:4.3, reviews:567, category:"home", badge:"Best Seller", badgeType:"bestseller", img:"https://picsum.photos/seed/prod16/300/300", popularity:76 }
+];
+
+/* ============ RENDER PRODUCT CARD ============ */
+function renderProductCard(p) {
+  const discount = Math.round(((p.oldPrice - p.price) / p.oldPrice) * 100);
+  const stars = '★'.repeat(Math.floor(p.rating)) + (p.rating % 1 ? '☆' : '');
+  return `
+    <div class="product-card" data-category="${p.category}" data-price="${p.price}" data-rating="${p.rating}" data-popularity="${p.popularity}" data-discount="${discount}">
+      <div class="product-img">
+        <img src="${p.img}" alt="${p.title}" loading="lazy" />
+        <span class="product-badge ${p.badgeType}">${p.badge}</span>
+        <button class="wishlist-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+        <span class="discount-tag">-${discount}%</span>
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">${p.title}</h3>
+        <div class="product-rating">
+          <span class="stars">${stars}</span>
+          <span>${p.rating}</span>
+          <span class="rating-count">(${p.reviews})</span>
+        </div>
+        <div class="product-price">
+          <span class="current-price">$${p.price.toFixed(2)}</span>
+          <span class="old-price">$${p.oldPrice.toFixed(2)}</span>
+        </div>
+        <button class="buy-btn" onclick="handleAffiliateClick('${p.title}')">
+          <i class="fa-solid fa-bag-shopping"></i> Buy Now
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+/* ============ RENDER GRIDS ============ */
+function renderFlashSale() {
+  const flashProducts = products.filter(p => p.badgeType === 'flash').slice(0, 8);
+  document.getElementById('flashSaleGrid').innerHTML = flashProducts.map(renderProductCard).join('');
+}
+
+function renderProducts(list) {
+  const grid = document.getElementById('productGrid');
+  if (list.length === 0) {
+    grid.innerHTML = '<p style="text-align:center;grid-column:1/-1;padding:40px;color:var(--text-light);">No products match your filters.</p>';
+    return;
+  }
+  grid.innerHTML = list.map(renderProductCard).join('');
+  attachWishlistHandlers();
+}
+
+/* ============ WISHLIST TOGGLE ============ */
+function attachWishlistHandlers() {
+  document.querySelectorAll('.wishlist-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      btn.classList.toggle('active');
+      const icon = btn.querySelector('i');
+      icon.classList.toggle('fa-regular');
+      icon.classList.toggle('fa-solid');
+    });
+  });
+}
+
+/* ============ AFFILIATE CLICK HANDLER ============ */
+function handleAffiliateClick(title) {
+  // In production, redirect to affiliate URL (Amazon/Daraz/eBay)
+  // Example: window.open('https://amazon.com/dp/ASIN?tag=morza-20', '_blank');
+  alert(`Redirecting to affiliate partner for:\n"${title}"\n\n(In production, this opens the affiliate link)`);
+}
+
+/* ============ FILTERS ============ */
+function applyFilters() {
+  const cat = document.getElementById('filterCategory').value;
+  const price = document.getElementById('filterPrice').value;
+  const rating = document.getElementById('filterRating').value;
+  const sort = document.getElementById('filterSort').value;
+
+  let filtered = [...products];
+
+  if (cat !== 'all') filtered = filtered.filter(p => p.category === cat);
+
+  if (price !== 'all') {
+    if (price === '0-50') filtered = filtered.filter(p => p.price < 50);
+    else if (price === '50-200') filtered = filtered.filter(p => p.price >= 50 && p.price <= 200);
+    else if (price === '200-1000') filtered = filtered.filter(p => p.price > 200 && p.price <= 1000);
+    else if (price === '1000+') filtered = filtered.filter(p => p.price > 1000);
+  }
+
+  if (rating !== 'all') filtered = filtered.filter(p => p.rating >= parseFloat(rating));
+
+  if (sort === 'low-high') filtered.sort((a,b) => a.price - b.price);
+  else if (sort === 'high-low') filtered.sort((a,b) => b.price - a.price);
+  else if (sort === 'discount') filtered.sort((a,b) => (b.oldPrice - b.price)/b.oldPrice - (a.oldPrice - a.price)/a.oldPrice);
+  else filtered.sort((a,b) => b.popularity - a.popularity);
+
+  renderProducts(filtered);
+}
+
+['filterCategory','filterPrice','filterRating','filterSort'].forEach(id => {
+  document.getElementById(id).addEventListener('change', applyFilters);
+});
+
+/* ============ HERO SLIDER ============ */
+const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.getElementById('sliderDots');
+let currentSlide = 0;
+
+slides.forEach((_, i) => {
+  const dot = document.createElement('span');
+  dot.className = 'dot' + (i === 0 ? ' active' : '');
+  dot.addEventListener('click', () => goToSlide(i));
+  dotsContainer.appendChild(dot);
+});
+
+function goToSlide(idx) {
+  slides[currentSlide].classList.remove('active');
+  dotsContainer.children[currentSlide].classList.remove('active');
+  currentSlide = (idx + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+  dotsContainer.children[currentSlide].classList.add('active');
+}
+
+document.getElementById('nextSlide').addEventListener('click', () => goToSlide(currentSlide + 1));
+document.getElementById('prevSlide').addEventListener('click', () => goToSlide(currentSlide - 1));
+setInterval(() => goToSlide(currentSlide + 1), 5000);
+
+/* ============ FLASH SALE COUNTDOWN ============ */
+function startCountdown() {
+  // Set end time to 8 hours from now (resets on reload)
+  const endTime = new Date().getTime() + 8 * 60 * 60 * 1000;
+
+  function update() {
+    const now = new Date().getTime();
+    const diff = endTime - now;
+    if (diff <= 0) return;
+    const h = Math.floor(diff / (1000*60*60));
+    const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+    const s = Math.floor((diff % (1000*60)) / 1000);
+    document.getElementById('hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('minutes').textContent = String(m).padStart(2,'0');
+    document.getElementById('seconds').textContent = String(s).padStart(2,'0');
+  }
+  update();
+  setInterval(update, 1000);
+}
+
+/* ============ MOBILE MENU ============ */
+const mobileMenu = document.getElementById('mobileMenu');
+const overlay = document.getElementById('overlay');
+document.getElementById('hamburger').addEventListener('click', () => {
+  mobileMenu.classList.add('open');
+  overlay.classList.add('show');
+});
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  overlay.classList.remove('show');
+}
+document.getElementById('closeMenu').addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
+document.querySelectorAll('.mobile-menu-list a').forEach(a => a.addEventListener('click', closeMenu));
+
+/* ============ SEARCH AUTOCOMPLETE ============ */
+const searchInput = document.getElementById('searchInput');
+const autocompleteList = document.getElementById('autocompleteList');
+
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.trim().toLowerCase();
+  autocompleteList.innerHTML = '';
+  if (!q) { autocompleteList.classList.remove('show'); return; }
+  const matches = products.filter(p => p.title.toLowerCase().includes(q)).slice(0, 6);
+  if (matches.length === 0) { autocompleteList.classList.remove('show'); return; }
+  matches.forEach(p => {
+    const li = document.createElement('li');
+    li.innerHTML = `<i class="fa-solid fa-magnifying-glass" style="color:var(--text-light);margin-right:8px;"></i>${p.title}`;
+    li.addEventListener('click', () => {
+      searchInput.value = p.title;
+      autocompleteList.classList.remove('show');
+    });
+    autocompleteList.appendChild(li);
+  });
+  autocompleteList.classList.add('show');
+});
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-bar')) autocompleteList.classList.remove('show');
+});
+
+/* ============ FORMS ============ */
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  alert('Thank you! Your message has been sent to Morza support.');
+  e.target.reset();
+});
+document.getElementById('newsletterForm').addEventListener('submit', e => {
+  e.preventDefault();
+  alert('🎉 Welcome to Morza! You\'ll receive the best deals in your inbox.');
+  e.target.reset();
+});
+
+/* ============ BOTTOM NAV ACTIVE STATE ============ */
+document.querySelectorAll('.bottom-item').forEach(item => {
+  item.addEventListener('click', function() {
+    document.querySelectorAll('.bottom-item').forEach(i => i.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+/* ============ INIT ============ */
+renderFlashSale();
+renderProducts(products);
+startCountdown();
